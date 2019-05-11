@@ -1,0 +1,1144 @@
+<html>
+<head>
+
+<link href="https://fonts.googleapis.com/css?family=Arvo|Nunito|Oxygen|Exo+2|Source+Code+Pro" rel="stylesheet"/>
+
+<link href="https://cdn.flycricket.com/templates/main-ltr/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://cdn.flycricket.com/templates/main-ltr/css/intlTelInput.min.css" rel="stylesheet"/>
+<link href="https://cdn.flycricket.com/templates/main-ltr/css/owl.carousel.min.css" rel="stylesheet"/>
+
+
+<style>/* these are overridden inline in the mustache compilation */
+:root {
+  --background-color: #ffffff;
+  --poweredbybg-color: #f0f0f0;
+  --text-color: #000000;
+  --link-color: #008DD5;
+  --linkhover-color: #005A88;
+  --main-font: 'Arvo'; }
+
+* {
+  font-family: var(--main-font);
+  font-weight: 400;
+  color: var(--text-color); }
+
+body {
+  padding: 0;
+  margin: 0;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -webkit-font-feature-settings: "pnum";
+  font-feature-settings: "pnum";
+  font-variant-numeric: proportional-nums;
+  position: relative;
+  background: #fff; }
+
+a {
+  color: var(--link-color);
+  transition: all 0.2s linear; }
+  a:focus, a:hover {
+    color: var(--linkhover-color); }
+  a.nohover:hover {
+    text-decoration: none; }
+
+.claim-bar {
+  padding: 12px 0;
+  background: #fff;
+  color: #555;
+  font-family: 'Oxygen', Helvetica, sans-serif;
+  transition: all 0.3s ease-in-out; }
+  .claim-bar * {
+    font-family: 'Oxygen', Helvetica, sans-serif; }
+  .claim-bar div {
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    font-size: 0.9em;
+    cursor: pointer;
+    color: #555; }
+    .claim-bar div span {
+      transition: all 0.3s ease-in-out;
+      color: #008DD5; }
+  .claim-bar:hover {
+    text-decoration: none;
+    text-decoration: none;
+    background: #008DD5;
+    color: white; }
+    .claim-bar:hover div {
+      color: white; }
+      .claim-bar:hover div span {
+        color: white; }
+
+.whitelabel-badge-mobile {
+  background: white;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+  border-radius: 4px;
+  text-align: center;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: 0.2s all ease-in-out; }
+  .whitelabel-badge-mobile .wl-label {
+    font-size: 0.8em;
+    color: #777; }
+  .whitelabel-badge-mobile * {
+    transition: 0.2s all ease-in-out; }
+  .whitelabel-badge-mobile .st0 {
+    fill: #1FAF84; }
+  .whitelabel-badge-mobile:hover {
+    background: #1FAF84; }
+    .whitelabel-badge-mobile:hover * {
+      color: white; }
+    .whitelabel-badge-mobile:hover .st0 {
+      fill: #ffffff; }
+  @media (min-width: 491px) {
+    .whitelabel-badge-mobile {
+      display: none; } }
+
+.whitelabel-badge {
+  position: fixed;
+  z-index: 999999999;
+  top: 10px;
+  right: 10px;
+  background: white;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+  border-radius: 4px;
+  text-align: center;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: 0.2s all ease-in-out;
+  display: none; }
+  .whitelabel-badge .wl-label {
+    font-family: 'Oxygen', Helvetica, sans-serif;
+    font-size: 0.8em;
+    color: #777; }
+  .whitelabel-badge * {
+    transition: 0.2s all ease-in-out; }
+  .whitelabel-badge .st0 {
+    fill: #1FAF84; }
+  .whitelabel-badge:hover {
+    background: #1FAF84; }
+    .whitelabel-badge:hover * {
+      color: white; }
+    .whitelabel-badge:hover .st0 {
+      fill: #ffffff; }
+  @media (min-width: 491px) {
+    .whitelabel-badge {
+      display: block; } }
+
+footer {
+  background: #222; }
+  footer p {
+    color: #777 !important; }
+  footer #social-icons {
+    background: #222;
+    padding: 0;
+    width: 100%; }
+    footer #social-icons .social-icon {
+      transition: opacity 0.2s ease-in-out;
+      display: inline-block;
+      width: 32px;
+      margin-right: 12px;
+      opacity: 0.5;
+      padding-top: 30px; }
+      footer #social-icons .social-icon path, footer #social-icons .social-icon polygon {
+        transition: all 0.2s linear;
+        fill: white; }
+      footer #social-icons .social-icon:hover {
+        opacity: 1; }
+  footer .footer-store-button-container {
+    text-align: right;
+    margin: auto;
+    vertical-align: middle; }
+    @media (max-width: 767px) {
+      footer .footer-store-button-container {
+        text-align: center; } }
+    footer .footer-store-button-container .footer-store-button {
+      padding-top: 2em;
+      padding-bottom: 2em;
+      display: inline-block; }
+      footer .footer-store-button-container .footer-store-button .store-button {
+        height: auto !important;
+        margin: 0 6px; }
+        footer .footer-store-button-container .footer-store-button .store-button svg {
+          height: 46px !important; }
+
+.store-button.ios .st0 {
+  fill: #A6A6A6; }
+
+.store-button.ios .st1 {
+  fill: #FFFFFF; }
+
+.store-button.android .st0 {
+  fill: none; }
+
+.store-button.android .st1 {
+  clip-path: url(#SVGID_2_); }
+
+.store-button.android .st2 {
+  clip-path: url(#SVGID_4_); }
+
+.store-button.android .st3 {
+  clip-path: url(#SVGID_6_); }
+
+.store-button.android .st4 {
+  clip-path: url(#SVGID_8_); }
+
+.store-button.android .st5 {
+  fill: #FFFFFF; }
+
+.store-button.android .st6 {
+  fill: #A6A6A6; }
+
+.store-button.android .st7 {
+  fill: #FFFFFF;
+  stroke: #FFFFFF;
+  stroke-width: 0.16;
+  stroke-miterlimit: 10; }
+
+.store-button.android .st8 {
+  fill: url(#path64_1_); }
+
+.store-button.android .st9 {
+  fill: url(#path78_1_); }
+
+.store-button.android .st10 {
+  fill: url(#path88_1_); }
+
+.store-button.android .st11 {
+  fill: url(#path104_1_); }
+
+.store-button.android .st12 {
+  filter: url(#Adobe_OpacityMaskFilter); }
+
+.store-button.android .st13 {
+  clip-path: url(#SVGID_10_);
+  fill-opacity: 0.2; }
+
+.store-button.android .st14 {
+  mask: url(#mask114_1_); }
+
+.store-button.android .st15 {
+  clip-path: url(#SVGID_12_); }
+
+.store-button.android .st16 {
+  fill: url(#path152_1_); }
+
+.store-button.android .st17 {
+  filter: url(#Adobe_OpacityMaskFilter_1_); }
+
+.store-button.android .st18 {
+  clip-path: url(#SVGID_14_);
+  fill-opacity: 0.12; }
+
+.store-button.android .st19 {
+  mask: url(#mask162_1_); }
+
+.store-button.android .st20 {
+  clip-path: url(#SVGID_16_); }
+
+.store-button.android .st21 {
+  fill: url(#path200_1_); }
+
+.store-button.android .st22 {
+  filter: url(#Adobe_OpacityMaskFilter_2_); }
+
+.store-button.android .st23 {
+  clip-path: url(#SVGID_18_);
+  fill-opacity: 0.12; }
+
+.store-button.android .st24 {
+  mask: url(#mask210_1_); }
+
+.store-button.android .st25 {
+  clip-path: url(#SVGID_20_); }
+
+.store-button.android .st26 {
+  fill: url(#path248_1_); }
+
+.store-button.android .st27 {
+  filter: url(#Adobe_OpacityMaskFilter_3_); }
+
+.store-button.android .st28 {
+  clip-path: url(#SVGID_22_);
+  fill-opacity: 0.25; }
+
+.store-button.android .st29 {
+  mask: url(#mask258_1_); }
+
+.store-button.android .st30 {
+  clip-path: url(#SVGID_24_); }
+
+.store-button.android .st31 {
+  fill: url(#path296_1_); }
+
+#attribution {
+  transition: all 0.2s ease-in-out;
+  padding: 2em 0;
+  font-size: 0.8em;
+  color: #888 !important; }
+  #attribution p {
+    margin-bottom: 0.45em;
+    font-size: 1.1em; }
+  #attribution a {
+    color: #aaa !important;
+    text-decoration: none; }
+    #attribution a:hover {
+      color: #007bff !important; }
+
+h1 {
+  font-size: 3.2em;
+  margin-bottom: 0;
+  font-weight: bold;
+  letter-spacing: 0.05em; }
+
+h2 {
+  margin-top: 0.2em;
+  margin-bottom: 0.3em;
+  font-size: 1.8em; }
+
+h3 {
+  font-weight: normal;
+  font-size: 16px; }
+
+html {
+  height: 100%; }
+
+body {
+  height: 100%;
+  color: var(--text-color);
+  text-align: center; }
+
+.cover-container {
+  margin-right: auto;
+  margin-left: auto; }
+
+.cover {
+  padding: 0 1.5rem; }
+  .cover .btn-lg {
+    padding: .75rem 1.25rem;
+    font-weight: 700; }
+
+p[id='text.line2'] {
+  margin-bottom: 0 !important; }
+
+.site-wrapper {
+  position: relative;
+  background-size: cover;
+  min-height: 100vh; }
+  .site-wrapper .site-wrapper-background {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0.9;
+    background-color: var(--background-color); }
+  .site-wrapper .site-wrapper-inner {
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh; }
+    @media (min-width: 767px) {
+      .site-wrapper .site-wrapper-inner {
+        padding-top: 0; } }
+    .site-wrapper .site-wrapper-inner .arrows {
+      width: 60px;
+      height: 32px;
+      position: absolute;
+      left: 50%;
+      margin-left: -30px;
+      bottom: 15px;
+      opacity: 0.5; }
+      @media (max-width: 786px) {
+        .site-wrapper .site-wrapper-inner .arrows {
+          display: none; } }
+      .site-wrapper .site-wrapper-inner .arrows path {
+        stroke: var(--text-color);
+        fill: transparent;
+        stroke-width: 2px; }
+
+@media (min-width: 40em) {
+  .cover-container {
+    width: 100%; } }
+
+@media (max-width: 786px) {
+  * {
+    text-align: center; } }
+
+#header {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: auto;
+  align-items: center;
+  justify-content: center; }
+  #header .text-container {
+    text-align: left;
+    position: relative;
+    display: block;
+    padding-left: 2em;
+    padding-right: 2em;
+    flex: 1;
+    max-width: 800px; }
+    #header .text-container .tc-table {
+      width: 100%;
+      display: table;
+      height: auto;
+      padding-bottom: 5em;
+      padding-top: 2em; }
+      @media (min-width: 787px) {
+        #header .text-container .tc-table {
+          height: 100%;
+          padding-bottom: 0; } }
+    #header .text-container h1 {
+      font-size: 2em;
+      margin-bottom: 0.25em;
+      font-weight: bold;
+      letter-spacing: 0.05em;
+      line-height: 1.1em; }
+      @media (min-width: 787px) {
+        #header .text-container h1 {
+          font-size: 3.2em; } }
+    #header .text-container h2 {
+      margin-top: 0.2em;
+      margin-bottom: 0.3em;
+      font-size: 1.3em; }
+      @media (min-width: 787px) {
+        #header .text-container h2 {
+          font-size: 1.8em; } }
+  #header .device-container {
+    padding-bottom: 2em;
+    width: 100%; }
+    #header .device-container img {
+      max-height: 70vh;
+      max-width: 90%;
+      position: relative;
+      margin-top: 5em; }
+    @media (min-width: 787px) {
+      #header .device-container {
+        width: auto;
+        max-width: 40vw;
+        padding-bottom: 0; }
+        #header .device-container img {
+          margin-top: 0; } }
+
+.store-button {
+  height: 56px;
+  width: auto;
+  display: inline-block; }
+  @media (min-width: 440px) {
+    .store-button:first-of-type {
+      margin-right: 12px; } }
+  .store-button:hover {
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.05); }
+  .store-button svg {
+    width: auto;
+    height: 100%;
+    display: block;
+    position: relative; }
+  @media (max-width: 768px) {
+    .store-button {
+      margin: auto; } }
+
+@media (max-width: 491px) {
+  .text-to-phone:not(.email-subscribe) {
+    display: none !important; } }
+
+.text-to-phone input[type='tel'], .text-to-phone input[type='email'] {
+  transition: all 0.2s linear;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  outline: none;
+  color: #333 !important;
+  text-align: left; }
+  .text-to-phone input[type='tel']:focus, .text-to-phone input[type='email']:focus {
+    border-color: var(--link-color); }
+
+.text-to-phone input[type='email'] {
+  padding-left: 12px;
+  width: 230px; }
+
+.text-to-phone button, .text-to-phone input[type='submit'] {
+  border-radius: 4px;
+  background: var(--link-color);
+  color: white;
+  font-size: 14px;
+  border: 0;
+  padding: 6px 8px;
+  padding-top: 7px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  outline: none;
+  cursor: pointer; }
+
+section {
+  padding: 5em 0;
+  background: white; }
+  section * {
+    color: #333; }
+  section h2 {
+    font-size: 2.5em;
+    color: #333;
+    padding-bottom: 0.25em;
+    margin-bottom: 0; }
+
+#screenshots .owl-nav {
+  padding-top: 3em; }
+  #screenshots .owl-nav button {
+    outline: none; }
+  #screenshots .owl-nav .owl-next, #screenshots .owl-nav .owl-prev {
+    font-size: 2em; }
+    #screenshots .owl-nav .owl-next *, #screenshots .owl-nav .owl-prev * {
+      color: rgba(0, 0, 0, 0.25); }
+  #screenshots .owl-nav .owl-prev {
+    margin-right: 1em; }
+
+#screenshots img {
+  border-radius: 0.5em;
+  -webkit-box-shadow: 2px 2px 10px -2px rgba(0, 0, 0, 0.49);
+  -moz-box-shadow: 2px 2px 10px -2px rgba(0, 0, 0, 0.49);
+  box-shadow: 2px 2px 5px -2px rgba(0, 0, 0, 0.49); }
+
+#screenshots h2 {
+  padding-bottom: 0.5em;
+  margin-bottom: 2em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  padding-left: 2em;
+  padding-right: 2em; }
+
+@media (max-width: 767px) {
+  #screenshots h2 {
+    padding-left: 0;
+    padding-right: 0;
+    display: block; } }
+
+#features p {
+  font-size: 1.4em; }
+
+#features ul {
+  padding-left: 1em;
+  padding-top: 0.75em; }
+  #features ul li {
+    list-style-type: circle;
+    font-size: 1.2em;
+    padding-bottom: 0.5em; }
+
+#features button {
+  transition: transform 0.2s ease-in-out;
+  padding: 0.75em 1.5em;
+  border: 0;
+  border-radius: 4px;
+  margin-top: 1em;
+  background-color: var(--background-color);
+  color: white;
+  cursor: pointer; }
+  #features button:hover {
+    transform: scale(1.1); }
+
+#features .feature-right {
+  text-align: left;
+  padding-top: 2em; }
+
+#features .feature-left {
+  text-align: center;
+  padding-right: 0; }
+  #features .feature-left img {
+    max-width: 100%;
+    max-height: 575px; }
+
+@media (min-width: 767px) {
+  #features .feature-left {
+    margin: auto;
+    padding-right: 40px; } }
+
+@media (max-width: 767px) {
+  #features .feature-right {
+    padding-top: 4em; }
+  #features ul {
+    padding-left: 0; }
+    #features ul li {
+      list-style: none; } }
+
+#reviews .stars {
+  width: 100%;
+  padding-bottom: 1.5em; }
+  #reviews .stars svg {
+    color: #eec643;
+    height: 34px;
+    width: 34px; }
+    #reviews .stars svg path {
+      fill: #eec643; }
+
+#reviews #quote-carousel {
+  padding: 0 80px; }
+  #reviews #quote-carousel .carousel-control svg {
+    width: 14px; }
+  #reviews #quote-carousel .carousel-control path {
+    fill: #999; }
+  #reviews #quote-carousel .carousel-indicators {
+    margin-bottom: -1em; }
+    #reviews #quote-carousel .carousel-indicators li {
+      background: #c0c0c0; }
+    #reviews #quote-carousel .carousel-indicators .active {
+      background: #666; }
+
+#reviews blockquote {
+  position: relative;
+  font-size: 1em;
+  font-style: italic;
+  color: #666;
+  padding: 0 5%;
+  margin-bottom: 0; }
+  @media (min-width: 768px) {
+    #reviews blockquote {
+      font-size: 1.6em;
+      line-height: 1.5em;
+      padding: 0 10%; } }
+  #reviews blockquote footer {
+    background: none !important;
+    font-size: 0.6em;
+    font-weight: 700;
+    color: #c7c6c1; }
+    #reviews blockquote footer:before {
+      content: '\2015'; }
+
+a.contact {
+  color: #999; }
+
+a.contact:hover {
+  color: #fff;
+  text-decoration: none; }
+
+@media (max-width: 767px) {
+  * {
+    text-align: center; } }
+</style>
+<script src="https://cdn.flycricket.com/templates/main-ltr/js/jquery.min.js" type="text/javascript"></script>
+<script src="https://cdn.flycricket.com/templates/main-ltr/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="https://cdn.flycricket.com/templates/main-ltr/js/bowser.min.js" type="text/javascript"></script>
+<script src="https://cdn.flycricket.com/templates/main-ltr/js/popper.min.js" type="text/javascript"></script>
+<script src="https://cdn.flycricket.com/templates/main-ltr/js/intlTelInput-jquery.min.js" type="text/javascript"></script>
+<script src="https://cdn.flycricket.com/templates/main-ltr/js/tinycolor.min.js" type="text/javascript"></script>
+<script src="https://cdn.flycricket.com/templates/main-ltr/js/owl.carousel.min.js" type="text/javascript"></script>
+<style>
+			.main-container {
+				color:#222;
+				padding:2em 0;
+				padding-bottom:4em;
+				text-align: left;
+			}
+			.main-container *:not(a) {
+				color:#222;
+			}
+	
+			a {
+				color: #009c9c;
+			}
+	
+			a:hover {
+				color: #007bff;
+			}
+	
+			h2 {
+				font-size: 1.5em;
+			}
+	
+			.main-container {
+				padding:2em;
+				background:white;
+				min-height:400px;
+				-webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.25);
+				-moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.25);
+				box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.25);
+			}
+		</style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+<meta content="https://xo4u.flycricket.io" property="og:url">
+<meta content="website" property="og:type">
+<meta content="XO4U" property="og:title"/>
+<!-- <meta property="og:image" content="" /> -->
+<meta content="" property="og:description"/>
+<meta content="" name="description"/>
+<title>XO4U</title>
+</meta></meta></head>
+<body style="background:#222;">
+<style id="global_style">:root {
+	--background-color: #004AC5;
+	--text-color: #ffffff;
+	--link-color: #EEC643;
+	--linkhover-color: #005A88;
+	--main-font: 'Oxygen';
+	--backgroundgradient: True;
+}
+</style>
+<div style="background:#eee;">
+<div class="container main-container">
+<h2><a>XO4U</a> &gt; Privacy Policy</h2>
+<hr/>
+<div id="content"> <p> yassine ennaour built the XO4U app as a Free app. This SERVICE is provided by                     yassine ennaour at no cost and is intended for use as is.                   </p> <p>This page is used to inform visitors regarding my policies with the collection, use, and disclosure                     of Personal Information if anyone decided to use my Service.                   </p> <p>If you choose to use my Service, then you agree to the collection and use of information in                     relation to this policy. The Personal Information that I collect is used for providing and improving                     the Service. I will not use or share your information with anyone except as described                     in this Privacy Policy.                   </p> <p>The terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which is                     accessible at XO4U unless otherwise defined in this Privacy Policy.                   </p> <p><strong>Information Collection and Use</strong></p> <p>For a better experience, while using our Service, I may require you to provide us with certain                     personally identifiable information. The information that I request will be retained on your device and is not collected by me in any way.                   </p> <p>The app does use third party services that may collect information used to identify you.</p> <div><p>Link to privacy policy of third party service providers used by the app</p> <ul><li><a href="https://www.google.com/policies/privacy/" target="_blank">Google Play Services</a></li><li><a href="https://support.google.com/admob/answer/6128543?hl=en" target="_blank">AdMob</a></li><!-- --><!-- --><!-- --><!-- --><!-- --><!-- --><!-- --></ul></div> <p><strong>Log Data</strong></p> <p> I want to inform you that whenever you use my Service, in a case of                     an error in the app I collect data and information (through third party products) on your phone                     called Log Data. This Log Data may include information such as your device Internet Protocol (â€œIPâ€) address,                     device name, operating system version, the configuration of the app when utilizing my Service,                     the time and date of your use of the Service, and other statistics.                   </p> <p><strong>Cookies</strong></p> <p>Cookies are files with a small amount of data that are commonly used as anonymous unique identifiers.                     These are sent to your browser from the websites that you visit and are stored on your device's internal                     memory.                   </p> <p>This Service does not use these â€œcookiesâ€ explicitly. However, the app may use third party code and                     libraries that use â€œcookiesâ€ to collect information and improve their services. You have the option to                     either accept or refuse these cookies and know when a cookie is being sent to your device. If you choose                     to refuse our cookies, you may not be able to use some portions of this Service.                   </p> <p><strong>Service Providers</strong></p> <p> I may employ third-party companies and individuals due to the following reasons:</p> <ul><li>To facilitate our Service;</li> <li>To provide the Service on our behalf;</li> <li>To perform Service-related services; or</li> <li>To assist us in analyzing how our Service is used.</li></ul> <p> I want to inform users of this Service that these third parties have access to                     your Personal Information. The reason is to perform the tasks assigned to them on our behalf. However,                     they are obligated not to disclose or use the information for any other purpose.                   </p> <p><strong>Security</strong></p> <p> I value your trust in providing us your Personal Information, thus we are striving                     to use commercially acceptable means of protecting it. But remember that no method of transmission over                     the internet, or method of electronic storage is 100% secure and reliable, and I cannot guarantee                     its absolute security.                   </p> <p><strong>Links to Other Sites</strong></p> <p>This Service may contain links to other sites. If you click on a third-party link, you will be directed                     to that site. Note that these external sites are not operated by me. Therefore, I strongly                     advise you to review the Privacy Policy of these websites. I have no control over                     and assume no responsibility for the content, privacy policies, or practices of any third-party sites                     or services.                   </p> <p><strong>Childrenâ€™s Privacy</strong></p> <p>These Services do not address anyone under the age of 13. I do not knowingly collect                     personally identifiable information from children under 13. In the case I discover that a child                     under 13 has provided me with personal information, I immediately delete this from                     our servers. If you are a parent or guardian and you are aware that your child has provided us with personal                     information, please contact me so that I will be able to do necessary actions.                   </p> <p><strong>Changes to This Privacy Policy</strong></p> <p> I may update our Privacy Policy from time to time. Thus, you are advised to review                     this page periodically for any changes. I will notify you of any changes by posting                     the new Privacy Policy on this page. These changes are effective immediately after they are posted on                     this page.                   </p> <p><strong>Contact Us</strong></p> <p>If you have any questions or suggestions about my Privacy Policy, do not hesitate to contact                     me at yas19sin.dev@gmail.com.                   </p> <p>This privacy policy page was created at <a href="https://privacypolicytemplate.net" target="_blank">privacypolicytemplate.net</a>                     and modified/generated by <a href="https://app-privacy-policy-generator.firebaseapp.com/" target="_blank">App                       Privacy Policy Generator</a></p></div>
+</div>
+</div>
+<footer><footer>
+<div class="container">
+<div class="row">
+<div class="col-xs-12 col-md-6" style="text-align:left;margin:auto;vertical-align:middle;">
+<div id="social-icons">
+</div>
+<div id="attribution">
+</div>
+</div>
+<div class="col-xs-12 col-md-6 footer-store-button-container">
+<div class="footer-store-button">
+<a class="store-button android" href="c2c587be147a43799d47dbe3714f67eb">
+<pattern height="48" id="pattern134" patternunits="userSpaceOnUse" style="overflow:visible;" viewbox="0 -48 124 48" width="124" y="40">
+<g>
+<rect class="st0" height="48" width="124" y="-48"></rect>
+<g id="g136_1_">
+</g>
+<g id="g138_1_">
+<g>
+<defs>
+<rect height="48" id="SVGID_1_" width="124" y="-48"></rect>
+</defs>
+<clippath id="SVGID_2_">
+<use style="overflow:visible;" xlink:href="#SVGID_1_"></use>
+</clippath>
+<g class="st1" id="g140_1_">
+<g id="g142_1_">
+<path d="M29.6-20.7L18-14.1c-0.6,0.4-1.2,0.3-1.6,0L16.3-14l0.1,0.1c0.4,0.3,1,0.4,1.6,0L29.6-20.7
+																					C29.7-20.6,29.6-20.7,29.6-20.7z" id="path144_1_"></path>
+</g>
+</g>
+</g>
+</g>
+</g>
+</pattern>
+<pattern height="48" id="pattern182" patternunits="userSpaceOnUse" style="overflow:visible;" viewbox="0 -48 124 48" width="124" y="40">
+<g>
+<rect class="st0" height="48" width="124" y="-48"></rect>
+<g id="g184_1_">
+</g>
+<g id="g186_1_">
+<g>
+<defs>
+<rect height="48" id="SVGID_3_" width="124" y="-48"></rect>
+</defs>
+<clippath id="SVGID_4_">
+<use style="overflow:visible;" xlink:href="#SVGID_3_"></use>
+</clippath>
+<g class="st2" id="g188_1_">
+<g id="g190_1_">
+<path d="M16.3-14.1c-0.2-0.2-0.4-0.6-0.4-1.1v0.1c0,0.5,0.1,0.9,0.4,1.1V-14.1L16.3-14.1z" id="path192_1_"></path>
+</g>
+</g>
+</g>
+</g>
+</g>
+</pattern>
+<pattern height="48" id="pattern230" patternunits="userSpaceOnUse" style="overflow:visible;" viewbox="0 -48 124 48" width="124" y="40">
+<g>
+<rect class="st0" height="48" width="124" y="-48"></rect>
+<g id="g232_1_">
+</g>
+<g id="g234_1_">
+<g>
+<defs>
+<rect height="48" id="SVGID_5_" width="124" y="-48"></rect>
+</defs>
+<clippath id="SVGID_6_">
+<use style="overflow:visible;" xlink:href="#SVGID_5_"></use>
+</clippath>
+<g class="st3" id="g236_1_">
+<g id="g238_1_">
+<path d="M33.6-23l-4,2.3l0.1,0.1l3.9-2.2c0.6-0.3,0.8-0.7,0.8-1.2C34.4-23.6,34.1-23.2,33.6-23z" id="path240_1_"></path>
+</g>
+</g>
+</g>
+</g>
+</g>
+</pattern>
+<pattern height="48" id="pattern278" patternunits="userSpaceOnUse" style="overflow:visible;" viewbox="0 -48 124 48" width="124" y="40">
+<g>
+<rect class="st0" height="48" width="124" y="-48"></rect>
+<g id="g280_1_">
+</g>
+<g id="g282_1_">
+<g>
+<defs>
+<rect height="48" id="SVGID_7_" width="124" y="-48"></rect>
+</defs>
+<clippath id="SVGID_8_">
+<use style="overflow:visible;" xlink:href="#SVGID_7_"></use>
+</clippath>
+<g class="st4" id="g284_1_">
+<g id="g286_1_">
+<path class="st5" d="M18-33.9L33.6-25c0.5,0.3,0.8,0.7,0.8,1c0-0.4-0.3-0.8-0.8-1.2L18-34
+																					c-1.1-0.6-2-0.1-2,1.2v0.1C16-34,16.9-34.5,18-33.9z" id="path288_1_"></path>
+</g>
+</g>
+</g>
+</g>
+</g>
+</pattern>
+<sodipodi:namedview bordercolor="#666666" borderopacity="1" gridtolerance="10" guidetolerance="10" id="namedview4" inkscape:current-layer="g10" inkscape:cx="93.965168" inkscape:cy="29.61582" inkscape:pageopacity="0" inkscape:pageshadow="2" inkscape:window-height="705" inkscape:window-maximized="1" inkscape:window-width="1366" inkscape:window-x="-8" inkscape:window-y="-8" inkscape:zoom="7.6276974" objecttolerance="10" pagecolor="#ffffff" showgrid="false">
+</sodipodi:namedview>
+<g id="g10" inkscape:groupmode="layer" inkscape:label="google-play-badge" transform="matrix(1.25,0,0,-1.25,-9.4247625,49.85025)">
+<g id="g12" transform="matrix(1.0023923,0,0,0.99072975,-0.29664807,0)">
+<path d="M112,8H12c-2.2,0-4,1.8-4,4v24c0,2.2,1.8,4,4,4h100c2.2,0,4-1.8,4-4V12
+																	C116,9.8,114.2,8,112,8z" id="path14" inkscape:connector-curvature="0"></path>
+<path class="st6" d="M112,39.4c1.9,0,3.4-1.5,3.4-3.4V12c0-1.9-1.5-3.4-3.4-3.4H12
+																	c-1.9,0-3.4,1.5-3.4,3.4v24c0,1.9,1.5,3.4,3.4,3.4H112 M112,40H12c-2.2,0-4-1.8-4-4V12c0-2.2,1.8-4,4-4h100c2.2,0,4,1.8,4,4v24
+																	C116,38.2,114.2,40,112,40z" id="path16" inkscape:connector-curvature="0"></path>
+<g id="g18" transform="matrix(1,0,0,-1,0,48)">
+<path class="st7" d="M45.9,16.2c0,0.7-0.2,1.2-0.6,1.6c-0.5,0.5-1,0.7-1.8,0.7
+																		c-0.7,0-1.3-0.2-1.8-0.7c-0.5-0.5-0.7-1.1-0.7-1.8c0-0.7,0.2-1.3,0.7-1.8c0.5-0.5,1.1-0.7,1.8-0.7c0.3,0,0.7,0.1,1,0.2
+																		c0.3,0.1,0.6,0.3,0.8,0.5l-0.4,0.4c-0.3-0.4-0.8-0.6-1.3-0.6c-0.5,0-0.9,0.2-1.3,0.5c-0.4,0.4-0.6,0.8-0.6,1.4
+																		c0,0.6,0.2,1,0.6,1.4c0.4,0.4,0.8,0.5,1.3,0.5c0.5,0,1-0.2,1.3-0.5c0.2-0.2,0.4-0.6,0.4-1h-1.7v-0.6h2.3
+																		C45.9,16,45.9,16.1,45.9,16.2z" id="path20" inkscape:connector-curvature="0"></path>
+</g>
+<g id="g22" transform="matrix(1,0,0,-1,0,48)">
+<path class="st7" d="M49.6,14.2h-2.2v1.5h2v0.6h-2v1.5h2.2v0.6h-2.8v-4.8h2.8
+																		C49.6,13.6,49.6,14.2,49.6,14.2z" id="path24" inkscape:connector-curvature="0"></path>
+</g>
+<g id="g26" transform="matrix(1,0,0,-1,0,48)">
+<path class="st7" d="M52.2,18.4h-0.6v-4.2h-1.3v-0.6h3.3v0.6h-1.3V18.4z" id="path28" inkscape:connector-curvature="0"></path>
+</g>
+<g id="g30" transform="matrix(1,0,0,-1,0,48)">
+<path class="st7" d="M55.9,18.4v-4.8h0.6v4.8H55.9z" id="path32" inkscape:connector-curvature="0"></path>
+</g>
+<g id="g34" transform="matrix(1,0,0,-1,0,48)">
+<path class="st7" d="M59.3,18.4h-0.6v-4.2h-1.3v-0.6h3.3v0.6h-1.3
+																		C59.3,14.2,59.3,18.4,59.3,18.4z" id="path36" inkscape:connector-curvature="0"></path>
+</g>
+<g id="g38" transform="matrix(1,0,0,-1,0,48)">
+<path class="st7" d="M66.9,17.8c-0.5,0.5-1.1,0.7-1.8,0.7c-0.7,0-1.3-0.2-1.8-0.7
+																		c-0.5-0.5-0.7-1.1-0.7-1.8s0.2-1.3,0.7-1.8c0.5-0.5,1.1-0.7,1.8-0.7c0.7,0,1.3,0.2,1.8,0.7c0.5,0.5,0.7,1.1,0.7,1.8
+																		C67.6,16.7,67.4,17.3,66.9,17.8z M63.8,17.4c0.4,0.4,0.8,0.5,1.3,0.5c0.5,0,0.9-0.2,1.3-0.5C66.8,17,67,16.6,67,16
+																		c0-0.6-0.2-1-0.5-1.4c-0.4-0.4-0.8-0.5-1.3-0.5c-0.5,0-0.9,0.2-1.3,0.5c-0.4,0.4-0.5,0.8-0.5,1.4C63.3,16.6,63.5,17,63.8,17.4z" id="path40" inkscape:connector-curvature="0"></path>
+</g>
+<g id="g42" transform="matrix(1,0,0,-1,0,48)">
+<path class="st7" d="M68.5,18.4v-4.8h0.8l2.3,3.7h0l0-0.9v-2.8h0.6v4.8h-0.6
+																		l-2.4-3.9h0l0,0.9v3C69.1,18.4,68.5,18.4,68.5,18.4z" id="path44" inkscape:connector-curvature="0"></path>
+</g>
+<path class="st5" d="M62.5,22.6c-1.9,0-3.4-1.4-3.4-3.4c0-2,1.5-3.4,3.4-3.4
+																	c1.9,0,3.4,1.4,3.4,3.4C65.9,21.2,64.4,22.6,62.5,22.6z M62.5,17.1c-1,0-1.9,0.9-1.9,2.1c0,1.2,0.9,2.1,1.9,2.1s1.9-0.8,1.9-2.1
+																	C64.4,18,63.5,17.1,62.5,17.1z M55.1,22.6c-1.9,0-3.4-1.4-3.4-3.4c0-2,1.5-3.4,3.4-3.4c1.9,0,3.4,1.4,3.4,3.4
+																	C58.5,21.2,56.9,22.6,55.1,22.6z M55.1,17.1c-1,0-1.9,0.9-1.9,2.1c0,1.2,0.9,2.1,1.9,2.1c1,0,1.9-0.8,1.9-2.1
+																	C57,18,56.1,17.1,55.1,17.1z M46.2,21.6v-1.4h3.5c-0.1-0.8-0.4-1.4-0.8-1.8c-0.5-0.5-1.3-1.1-2.7-1.1c-2.1,0-3.8,1.7-3.8,3.8
+																	s1.7,3.8,3.8,3.8c1.1,0,2-0.4,2.6-1l1,1c-0.9,0.8-2,1.5-3.6,1.5c-2.9,0-5.4-2.4-5.4-5.3s2.4-5.3,5.4-5.3c1.6,0,2.8,0.5,3.7,1.5
+																	c1,1,1.2,2.3,1.2,3.4c0,0.3,0,0.6-0.1,0.9C51.1,21.6,46.2,21.6,46.2,21.6z M82.4,20.4c-0.3,0.8-1.1,2.2-2.9,2.2
+																	c-1.8,0-3.2-1.4-3.2-3.4c0-1.9,1.4-3.4,3.4-3.4c1.6,0,2.5,1,2.8,1.5l-1.2,0.8c-0.4-0.6-0.9-0.9-1.7-0.9c-0.8,0-1.3,0.3-1.6,1
+																	l4.6,1.9C82.6,20,82.4,20.4,82.4,20.4z M77.8,19.3c0,1.3,1,2,1.8,2c0.6,0,1.1-0.3,1.3-0.7C80.8,20.6,77.8,19.3,77.8,19.3z
+																	M74.1,16h1.5v10h-1.5V16z M71.7,21.8L71.7,21.8c-0.4,0.4-1,0.8-1.8,0.8c-1.7,0-3.3-1.5-3.3-3.4c0-1.9,1.6-3.4,3.3-3.4
+																	c0.8,0,1.5,0.4,1.8,0.8h0.1v-0.5c0-1.3-0.7-2-1.8-2c-0.9,0-1.5,0.7-1.7,1.2l-1.3-0.5c0.4-0.9,1.4-2,3-2c1.8,0,3.2,1,3.2,3.5v6.1
+																	h-1.4V21.8z M69.9,17.1c-1,0-1.9,0.9-1.9,2.1c0,1.2,0.9,2.1,1.9,2.1c1,0,1.8-0.9,1.8-2.1C71.8,18,71,17.1,69.9,17.1z M89.4,26
+																	h-3.6V16h1.5v3.8h2.1c1.7,0,3.3,1.2,3.3,3.1C92.7,24.8,91.1,26,89.4,26z M89.5,21.2h-2.1v3.4h2.1c1.1,0,1.8-0.9,1.8-1.7
+																	C91.2,22.1,90.6,21.2,89.5,21.2z M98.7,22.6c-1.1,0-2.2-0.5-2.7-1.5l1.3-0.6c0.3,0.6,0.8,0.7,1.4,0.7c0.8,0,1.6-0.5,1.6-1.3v-0.1
+																	c-0.3,0.2-0.8,0.4-1.6,0.4c-1.4,0-2.9-0.8-2.9-2.2c0-1.3,1.2-2.2,2.5-2.2c1,0,1.6,0.5,1.9,1h0.1V16h1.4v3.8
+																	C101.7,21.6,100.4,22.6,98.7,22.6z M98.5,17.1c-0.5,0-1.2,0.2-1.2,0.8c0,0.8,0.8,1.1,1.6,1.1c0.7,0,1-0.1,1.4-0.3
+																	C100.2,17.8,99.4,17.1,98.5,17.1z M107,22.4l-1.7-4.3h-0.1l-1.8,4.3h-1.6l2.7-6.1L103,13h1.6l4.1,9.4
+																	C108.7,22.4,107,22.4,107,22.4z M93.5,16H95v10h-1.5V16z" id="path46" inkscape:connector-curvature="0"></path>
+<g id="g48">
+<lineargradient gradienttransform="matrix(1.0024 0 0 -0.9907 -7.384 170.6873)" gradientunits="userSpaceOnUse" id="path64_1_" x1="32.7446" x2="15.9622" y1="157.1773" y2="140.3949">
+<stop offset="0" style="stop-color:#00A0FF"></stop>
+<stop offset="6.599999e-03" style="stop-color:#00A1FF"></stop>
+<stop offset="0.2601" style="stop-color:#00BEFF"></stop>
+<stop offset="0.5122" style="stop-color:#00D2FF"></stop>
+<stop offset="0.7604" style="stop-color:#00DFFF"></stop>
+<stop offset="1" style="stop-color:#00E3FF"></stop>
+</lineargradient>
+<path class="st8" d="M16.3,34c-0.2-0.2-0.4-0.6-0.4-1.1V15.2
+																		c0-0.5,0.1-0.9,0.4-1.1l0.1-0.1l9.9,9.9v0.2L16.3,34L16.3,34z" id="path64" inkscape:connector-curvature="0"></path>
+</g>
+<g id="g66">
+<lineargradient gradienttransform="matrix(1.0024 0 0 -0.9907 -7.384 170.6873)" gradientunits="userSpaceOnUse" id="path78_1_" x1="42.3502" x2="18.1533" y1="148.0598" y2="148.0598">
+<stop offset="0" style="stop-color:#FFE000"></stop>
+<stop offset="0.4087" style="stop-color:#FFBD00"></stop>
+<stop offset="0.7754" style="stop-color:#FFA500"></stop>
+<stop offset="1" style="stop-color:#FF9C00"></stop>
+</lineargradient>
+<path class="st9" d="M29.6,20.6l-3.3,3.3v0.2l3.3,3.3l0.1,0l3.9-2.2
+																		c1.1-0.6,1.1-1.7,0-2.3L29.6,20.6C29.7,20.6,29.6,20.6,29.6,20.6z" id="path78" inkscape:connector-curvature="0"></path>
+</g>
+<g id="g80">
+<lineargradient gradienttransform="matrix(1.0024 0 0 -0.9907 -7.384 170.6873)" gradientunits="userSpaceOnUse" id="path88_1_" x1="28.5018" x2="5.7435" y1="152.9438" y2="130.1855">
+<stop offset="0" style="stop-color:#FF3A44"></stop>
+<stop offset="1" style="stop-color:#C31162"></stop>
+</lineargradient>
+<path class="st10" d="M29.7,20.6L26.3,24l-10-10c0.4-0.4,1-0.4,1.7,0L29.7,20.6" id="path88" inkscape:connector-curvature="0"></path>
+</g>
+<g id="g90">
+<lineargradient gradienttransform="matrix(1.0024 0 0 -0.9907 -7.384 170.6873)" gradientunits="userSpaceOnUse" id="path104_1_" x1="14.5132" x2="24.6758" y1="157.3309" y2="147.1684">
+<stop offset="0" style="stop-color:#32A071"></stop>
+<stop offset="6.850000e-02" style="stop-color:#2DA771"></stop>
+<stop offset="0.4762" style="stop-color:#15CF74"></stop>
+<stop offset="0.8009" style="stop-color:#06E775"></stop>
+<stop offset="1" style="stop-color:#00F076"></stop>
+</lineargradient>
+<path class="st11" d="M29.7,27.4L18,34c-0.7,0.4-1.3,0.3-1.7-0.1l10-10L29.7,27.4
+																		z" id="path104" inkscape:connector-curvature="0"></path>
+</g>
+<g id="g106">
+<g id="g108">
+</g>
+<defs>
+<filter filterunits="userSpaceOnUse" height="48" id="Adobe_OpacityMaskFilter" width="124" x="0" y="-48">
+<fecolormatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"></fecolormatrix>
+</filter>
+</defs>
+<mask height="48" id="mask114_1_" maskunits="userSpaceOnUse" width="124" x="0" y="-48">
+<g class="st12" id="g116_1_">
+<g>
+<defs>
+<rect height="48" id="SVGID_9_" width="124" x="-4.7" y="-3.1"></rect>
+</defs>
+<clippath id="SVGID_10_">
+<use style="overflow:visible;" xlink:href="#SVGID_9_"></use>
+</clippath>
+<g id="g118_1_">
+<path class="st13" d="M7.8,40.3h99V1.5h-99V40.3z" id="path120_1_" inkscape:connector-curvature="0"></path>
+</g>
+</g>
+</g>
+</mask>
+<g class="st14" id="g122">
+<g id="g124">
+</g>
+<g id="g146">
+<g>
+<defs>
+<rect height="59.4" id="SVGID_11_" width="155.4" x="-15.7" y="-5.7"></rect>
+</defs>
+<clippath id="SVGID_12_">
+<use style="overflow:visible;" xlink:href="#SVGID_11_"></use>
+</clippath>
+<g class="st15" id="g148">
+<g id="g150">
+<pattern id="path152_1_" patterntransform="matrix(1.253 0 0 -1.2384 2126.8743 -17667.1562)" xlink:href="#pattern134">
+</pattern>
+<path class="st16" d="M0,0h124v48H0V0z" id="path152" inkscape:connector-curvature="0"></path>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+<g id="g154">
+<g id="g156">
+</g>
+<defs>
+<filter filterunits="userSpaceOnUse" height="48" id="Adobe_OpacityMaskFilter_1_" width="124" x="0" y="-48">
+<fecolormatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"></fecolormatrix>
+</filter>
+</defs>
+<mask height="48" id="mask162_1_" maskunits="userSpaceOnUse" width="124" x="0" y="-48">
+<g class="st17" id="g164_1_">
+<g>
+<defs>
+<rect height="48" id="SVGID_13_" width="124" x="-4.7" y="-3.1"></rect>
+</defs>
+<clippath id="SVGID_14_">
+<use style="overflow:visible;" xlink:href="#SVGID_13_"></use>
+</clippath>
+<g id="g166_1_">
+<path class="st18" d="M7.8,40.3h99V1.5h-99V40.3z" id="path168_1_" inkscape:connector-curvature="0"></path>
+</g>
+</g>
+</g>
+</mask>
+<g class="st19" id="g170">
+<g id="g172">
+</g>
+<g id="g194">
+<g>
+<defs>
+<rect height="59.4" id="SVGID_15_" width="155.4" x="-15.7" y="-5.7"></rect>
+</defs>
+<clippath id="SVGID_16_">
+<use style="overflow:visible;" xlink:href="#SVGID_15_"></use>
+</clippath>
+<g class="st20" id="g196">
+<g id="g198">
+<pattern id="path200_1_" patterntransform="matrix(1.253 0 0 -1.2384 2126.8743 -17667.1562)" xlink:href="#pattern182">
+</pattern>
+<path class="st21" d="M0,0h124v48H0V0z" id="path200" inkscape:connector-curvature="0"></path>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+<g id="g202">
+<g id="g204">
+</g>
+<defs>
+<filter filterunits="userSpaceOnUse" height="48" id="Adobe_OpacityMaskFilter_2_" width="124" x="0" y="-48">
+<fecolormatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"></fecolormatrix>
+</filter>
+</defs>
+<mask height="48" id="mask210_1_" maskunits="userSpaceOnUse" width="124" x="0" y="-48">
+<g class="st22" id="g212_1_">
+<g>
+<defs>
+<rect height="48" id="SVGID_17_" width="124" x="-4.7" y="-3.1"></rect>
+</defs>
+<clippath id="SVGID_18_">
+<use style="overflow:visible;" xlink:href="#SVGID_17_"></use>
+</clippath>
+<g id="g214_1_">
+<path class="st23" d="M7.8,40.3h99V1.5h-99V40.3z" id="path216_1_" inkscape:connector-curvature="0"></path>
+</g>
+</g>
+</g>
+</mask>
+<g class="st24" id="g218">
+<g id="g220">
+</g>
+<g id="g242">
+<g>
+<defs>
+<rect height="59.4" id="SVGID_19_" width="155.4" x="-15.7" y="-5.7"></rect>
+</defs>
+<clippath id="SVGID_20_">
+<use style="overflow:visible;" xlink:href="#SVGID_19_"></use>
+</clippath>
+<g class="st25" id="g244">
+<g id="g246">
+<pattern id="path248_1_" patterntransform="matrix(1.253 0 0 -1.2384 2126.8743 -17667.1562)" xlink:href="#pattern230">
+</pattern>
+<path class="st26" d="M0,0h124v48H0V0z" id="path248" inkscape:connector-curvature="0"></path>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+<g id="g250">
+<g id="g252">
+</g>
+<defs>
+<filter filterunits="userSpaceOnUse" height="48" id="Adobe_OpacityMaskFilter_3_" width="124" x="0" y="-48">
+<fecolormatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"></fecolormatrix>
+</filter>
+</defs>
+<mask height="48" id="mask258_1_" maskunits="userSpaceOnUse" width="124" x="0" y="-48">
+<g class="st27" id="g260_1_">
+<g>
+<defs>
+<rect height="48" id="SVGID_21_" width="124" x="-4.7" y="-3.1"></rect>
+</defs>
+<clippath id="SVGID_22_">
+<use style="overflow:visible;" xlink:href="#SVGID_21_"></use>
+</clippath>
+<g id="g262_1_">
+<path class="st28" d="M7.8,40.3h99V1.5h-99V40.3z" id="path264_1_" inkscape:connector-curvature="0"></path>
+</g>
+</g>
+</g>
+</mask>
+<g class="st29" id="g266">
+<g id="g268">
+</g>
+<g id="g290">
+<g>
+<defs>
+<rect height="59.4" id="SVGID_23_" width="155.4" x="-15.7" y="-5.7"></rect>
+</defs>
+<clippath id="SVGID_24_">
+<use style="overflow:visible;" xlink:href="#SVGID_23_"></use>
+</clippath>
+<g class="st30" id="g292">
+<g id="g294">
+<pattern id="path296_1_" patterntransform="matrix(1.253 0 0 -1.2384 2126.8743 -17667.1562)" xlink:href="#pattern278">
+</pattern>
+<path class="st31" d="M0,0h124v48H0V0z" id="path296" inkscape:connector-curvature="0"></path>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</svg>
+</a>
+</div>
+</div>
+</div>
+</div>
+</footer></footer>
+<g>
+<path class="st0" d="M10.9,14.5v12.4h14.8c0.8,0,1.5,0.3,2.1,0.8c0.5,0.5,0.8,1.2,0.8,2c0,0.7-0.3,1.3-0.8,1.9
+										c-0.5,0.5-1.2,0.8-2.1,0.8H10.9v15.7c0,0.8-0.3,1.5-0.9,2C9.4,50.7,8.7,51,7.9,51c-0.8,0-1.5-0.3-2.1-0.8c-0.6-0.6-0.8-1.2-0.8-2
+										V11.9c0-0.8,0.3-1.5,0.8-2C6.4,9.3,7.1,9,7.9,9h20.5c0.8,0,1.5,0.3,2.1,0.8c0.5,0.5,0.8,1.2,0.8,2c0,0.7-0.3,1.4-0.8,1.9
+										c-0.6,0.5-1.2,0.8-2,0.8H10.9z"></path>
+<path class="st0" d="M43.4,50.2c-0.6,0.6-1.2,0.8-2,0.8c-0.8,0-1.5-0.3-2-0.8c-0.5-0.6-0.8-1.2-0.8-2V9.5c0-0.8,0.3-1.5,0.8-2
+										c0.6-0.6,1.2-0.8,2-0.8c0.8,0,1.5,0.3,2,0.8c0.5,0.6,0.8,1.2,0.8,2v38.6C44.3,48.9,44,49.6,43.4,50.2z"></path>
+<path class="st0" d="M77.8,20.1c0.5,0.6,0.8,1.2,0.8,2v25.9c0,5-1.4,8.7-4.1,11.2c-2.8,2.5-6.4,3.7-10.9,3.7
+										c-1.5,0-2.9-0.1-4.4-0.4c-1.4-0.3-2.6-0.7-3.5-1.1c-1.5-0.7-2.2-1.6-2.2-2.8c0-0.2,0-0.5,0.1-0.8c0.2-0.7,0.6-1.2,1-1.6
+										c0.4-0.4,0.9-0.5,1.5-0.5c0.3,0,0.6,0.1,0.9,0.2c1.2,0.6,2.3,1,3.3,1.3c1,0.3,2.1,0.5,3.4,0.5c6.2,0,9.3-3.2,9.3-9.5V47
+										c-1.1,1.4-2.5,2.6-4.2,3.4c-1.7,0.8-3.7,1.2-5.9,1.2c-3.3,0-5.9-1.1-7.8-3.2c-1.9-2.1-2.8-4.9-2.8-8.3V22.1c0-0.8,0.3-1.5,0.8-2.1
+										c0.5-0.5,1.2-0.8,2-0.8s1.5,0.3,2.1,0.8c0.5,0.6,0.8,1.2,0.8,2v16.4c0,2.6,0.6,4.6,1.7,5.9c1.2,1.3,2.9,1.9,5.3,1.9
+										c2.3,0,4.2-0.7,5.6-2.2c1.5-1.4,2.2-3.3,2.2-5.6V22.1c0-0.8,0.3-1.5,0.8-2.1c0.5-0.5,1.2-0.8,2-0.8C76.6,19.3,77.3,19.5,77.8,20.1z
+										"></path>
+<path class="st0" d="M108.4,20.3c2.1,1,3.1,2.3,3.1,3.8c0,0.7-0.2,1.3-0.7,1.8c-0.4,0.5-1,0.8-1.7,0.8c-0.5,0-0.9-0.1-1.2-0.2
+										c-0.3-0.2-0.7-0.4-1.2-0.8c-0.2-0.2-0.6-0.5-1.1-0.8c-0.5-0.2-1.2-0.4-2-0.6c-0.9-0.2-1.7-0.2-2.4-0.2c-2.1,0-3.9,0.5-5.5,1.4
+										c-1.6,1-2.8,2.3-3.7,4c-0.9,1.7-1.3,3.6-1.3,5.7c0,2.1,0.4,4,1.3,5.7c0.9,1.7,2.1,3,3.6,4s3.3,1.4,5.3,1.4c2.1,0,3.8-0.3,5-1
+										c0.3-0.2,0.7-0.4,1.1-0.8c0.4-0.3,0.8-0.6,1-0.7c0.3-0.2,0.7-0.2,1.1-0.2c0.8,0,1.4,0.2,1.9,0.8c0.5,0.5,0.7,1.2,0.7,1.9
+										c0,0.8-0.5,1.7-1.6,2.5c-1.1,0.8-2.5,1.5-4.3,2c-1.8,0.5-3.7,0.8-5.7,0.8c-3,0-5.7-0.7-8-2.1c-2.3-1.4-4.1-3.4-5.4-5.9
+										c-1.3-2.5-1.9-5.3-1.9-8.4c0-3.1,0.7-5.9,2-8.4c1.3-2.5,3.2-4.5,5.5-5.9c2.4-1.4,5.1-2.1,8.1-2.1C103.7,18.8,106.3,19.3,108.4,20.3
+										z"></path>
+<path class="st0" d="M136,19.6c0.8,0.5,1.1,1.2,1.1,2c0,1-0.2,1.7-0.8,2.2c-0.5,0.5-1.1,0.8-1.8,0.8c-0.4,0-0.9-0.1-1.6-0.4
+										c-0.8-0.3-1.5-0.4-2-0.4c-1.2,0-2.5,0.4-3.6,1.3c-1.2,0.9-2.1,2-2.9,3.5c-0.7,1.5-1.1,3.2-1.1,5v14.5c0,0.8-0.3,1.5-0.8,2
+										c-0.5,0.6-1.2,0.8-2.1,0.8s-1.5-0.3-2-0.8c-0.5-0.5-0.8-1.2-0.8-2.1V22.4c0-0.8,0.3-1.5,0.8-2c0.5-0.6,1.2-0.8,2-0.8
+										c0.8,0,1.5,0.3,2.1,0.8c0.5,0.6,0.8,1.2,0.8,2v3.1c0.9-2,2.2-3.5,4-4.8c1.8-1.2,3.8-1.8,6-1.9C134.4,18.8,135.3,19.1,136,19.6z"></path>
+<path class="st0" d="M142.5,14.7c-0.5-0.4-0.8-1.1-0.8-2v-1c0-1,0.3-1.6,0.8-2c0.5-0.4,1.4-0.6,2.5-0.6c1.1,0,1.9,0.2,2.4,0.6
+										c0.5,0.4,0.8,1.1,0.8,2v1c0,1-0.3,1.6-0.8,2c-0.5,0.4-1.3,0.6-2.5,0.6C143.8,15.3,143,15.1,142.5,14.7z M147,50.2
+										c-0.5,0.6-1.2,0.8-2.1,0.8c-0.8,0-1.5-0.3-2-0.8c-0.5-0.6-0.8-1.2-0.8-2v-26c0-0.8,0.3-1.5,0.8-2c0.5-0.6,1.2-0.8,2-0.8
+										c0.8,0,1.5,0.3,2.1,0.8c0.5,0.6,0.8,1.2,0.8,2v26C147.8,48.9,147.6,49.6,147,50.2z"></path>
+<path class="st0" d="M177.6,20.3c2.1,1,3.1,2.3,3.1,3.8c0,0.7-0.2,1.3-0.7,1.8c-0.4,0.5-1,0.8-1.7,0.8c-0.5,0-0.9-0.1-1.2-0.2
+										c-0.3-0.2-0.7-0.4-1.2-0.8c-0.2-0.2-0.6-0.5-1.1-0.8c-0.5-0.2-1.2-0.4-2-0.6c-0.9-0.2-1.7-0.2-2.4-0.2c-2.1,0-3.9,0.5-5.5,1.4
+										c-1.6,1-2.8,2.3-3.7,4c-0.9,1.7-1.3,3.6-1.3,5.7c0,2.1,0.4,4,1.3,5.7c0.9,1.7,2.1,3,3.6,4s3.3,1.4,5.3,1.4c2.1,0,3.8-0.3,5-1
+										c0.3-0.2,0.7-0.4,1.1-0.8c0.4-0.3,0.8-0.6,1-0.7c0.3-0.2,0.7-0.2,1.1-0.2c0.8,0,1.4,0.2,1.9,0.8c0.5,0.5,0.7,1.2,0.7,1.9
+										c0,0.8-0.5,1.7-1.6,2.5c-1.1,0.8-2.5,1.5-4.3,2c-1.8,0.5-3.7,0.8-5.7,0.8c-3,0-5.7-0.7-8-2.1c-2.3-1.4-4.1-3.4-5.4-5.9
+										c-1.3-2.5-1.9-5.3-1.9-8.4c0-3.1,0.7-5.9,2-8.4c1.3-2.5,3.2-4.5,5.5-5.9c2.4-1.4,5.1-2.1,8.1-2.1C172.9,18.8,175.5,19.3,177.6,20.3
+										z"></path>
+<path class="st0" d="M213.5,48.1c0,0.8-0.3,1.5-0.9,2c-0.6,0.5-1.3,0.8-2,0.8c-0.9,0-1.6-0.3-2.1-1l-11.8-12.5l-3.6,3.2v7.4
+										c0,0.8-0.3,1.5-0.8,2c-0.5,0.6-1.2,0.8-2,0.8c-0.8,0-1.5-0.3-2.1-0.8c-0.5-0.6-0.8-1.2-0.8-2V9.5c0-0.8,0.3-1.5,0.8-2
+										c0.5-0.6,1.2-0.8,2.1-0.8c0.8,0,1.5,0.3,2,0.8c0.5,0.6,0.8,1.2,0.8,2v24.4l14.7-13.5c0.7-0.6,1.4-0.9,2.1-0.9
+										c0.7,0,1.3,0.3,1.9,0.9c0.6,0.6,0.8,1.2,0.8,1.8c0,0.8-0.4,1.5-1.1,2.2l-10.4,9.2L212.6,46C213.2,46.7,213.5,47.4,213.5,48.1z"></path>
+<path class="st0" d="M245.6,35.9c-0.6,0.5-1.2,0.8-2,0.8h-21.1c0.3,2.9,1.4,5.3,3.3,7c1.9,1.8,4.3,2.6,7.1,2.6
+										c1.9,0,3.5-0.3,4.7-0.8c1.2-0.6,2.3-1.3,3.2-2.2c0.6-0.4,1.2-0.5,1.7-0.5c0.7,0,1.2,0.2,1.7,0.7c0.5,0.5,0.7,1,0.7,1.7
+										c0,0.8-0.4,1.6-1.2,2.3c-1.2,1.2-2.7,2.1-4.6,2.9s-3.9,1.2-5.9,1.2c-3.2,0-6.1-0.7-8.6-2c-2.5-1.4-4.4-3.3-5.7-5.7
+										c-1.3-2.4-2-5.2-2-8.3c0-3.4,0.7-6.3,2.1-8.9c1.4-2.5,3.2-4.5,5.5-5.9c2.3-1.4,4.7-2,7.3-2c2.6,0,5,0.7,7.2,2
+										c2.2,1.3,4,3.1,5.4,5.5c1.4,2.3,2.1,4.9,2.1,7.8C246.4,34.8,246.1,35.4,245.6,35.9z M226,26c-1.6,1.3-2.7,3.2-3.2,5.9h17.7v-0.5
+										c-0.2-2.1-1.1-3.9-2.8-5.2c-1.7-1.4-3.6-2-5.8-2C229.5,24.1,227.6,24.7,226,26z"></path>
+<path class="st0" d="M261.6,25.1V43c0,2,0.9,3,2.7,3c0.3,0,0.7-0.1,1.1-0.2c0.5-0.1,0.9-0.2,1.1-0.2c0.5,0,1,0.2,1.3,0.7
+										c0.4,0.4,0.5,1,0.5,1.7c0,0.8-0.5,1.6-1.4,2.2s-2,0.9-3.2,0.9c-1.3,0-2.5-0.1-3.6-0.4c-1.1-0.3-2.1-1-2.9-2.1
+										c-0.9-1.1-1.3-2.9-1.3-5.2V25.1h-3.5c-0.8,0-1.4-0.2-1.9-0.8c-0.5-0.5-0.8-1.1-0.8-1.9c0-0.8,0.2-1.4,0.8-1.9
+										c0.5-0.5,1.1-0.7,1.9-0.7h3.5v-5c0-0.8,0.3-1.5,0.8-2c0.5-0.6,1.2-0.8,2.1-0.8c0.8,0,1.5,0.3,2,0.8c0.5,0.6,0.8,1.2,0.8,2v5h5
+										c0.8,0,1.4,0.3,1.9,0.8c0.5,0.5,0.8,1.1,0.8,1.9c0,0.8-0.2,1.4-0.8,1.9c-0.5,0.5-1.1,0.7-1.9,0.7H261.6z"></path>
+</g>
+</svg>
+</div>
+</div>
+</a>
+</div>
+</body>
+</html>
